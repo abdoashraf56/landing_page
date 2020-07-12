@@ -61,9 +61,9 @@ function ScrollToSection(event, section) {
  * @param {HTMLElement} section 
  */
 function CheckInViewPort(section) {
-    let pos = section.getBoundingClientRect()
-    let scroll = window.pageYOffset
-    return Math.abs(pos.top) < 30 && pos.top > -pos.height
+    let pos = section.getBoundingClientRect();
+    let scroll = window.pageYOffset;
+    return Math.abs(pos.top) < 30 && pos.top > -pos.height;
 }
 
 let nav, sections, activeSection, activeNav, setTimeOutScroll
@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let index = 0; index < sections.length; index++) {
             if(CheckInViewPort(sections[index])){
-                ActivateSection(sections[index])
-                ActivateNavLink(nav.getElementsByTagName('li')[index])
+                ActivateSection(sections[index]);
+                ActivateNavLink(nav.getElementsByTagName('li')[index]);
             }
         }
 
