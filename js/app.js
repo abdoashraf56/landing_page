@@ -63,7 +63,7 @@ function ScrollToSection(event, section) {
 function CheckInViewPort(element) {
     let pos = element.getBoundingClientRect()
     let scroll = window.pageYOffset
-    return pos.y <= pos.height && pos.bottom >= 0
+    return Math.abs(pos.top) < 30 && pos.top > -pos.height
 }
 
 let nav, sections, activeSection, activeNav, setTimeOutScroll
