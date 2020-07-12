@@ -58,10 +58,10 @@ function ScrollToSection(event, section) {
 
 /**
  * @description Check if Section is on Viewport
- * @param {HTMLElement} element 
+ * @param {HTMLElement} section 
  */
-function CheckInViewPort(element) {
-    let pos = element.getBoundingClientRect()
+function CheckInViewPort(section) {
+    let pos = section.getBoundingClientRect()
     let scroll = window.pageYOffset
     return Math.abs(pos.top) < 30 && pos.top > -pos.height
 }
